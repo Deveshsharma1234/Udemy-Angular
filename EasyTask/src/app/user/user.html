@@ -1,0 +1,7 @@
+<div>
+  <button *ngFor="let u of users" (click)="onSelectUser(u)">
+    <img [src]="'/users/' + u.avatar" [alt]="u.name|| 'img'" alt="{{u.name || 'img'}}" />
+    <span>{{ u.name }}</span>
+    <h1>{{count}}</h1>
+  </button>
+</div>

@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { DUMMY_USERS } from '../dummy_users';
+import { Component ,EventEmitter,Input,Output,signal} from '@angular/core';
+
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,16 +9,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './user.css'
 })
 export class User {
-  users = DUMMY_USERS
-  count = 0;
-
+  @Input() users: any;
+  @Output() select = new EventEmitter();
   onSelectUser (u:any)
   {
-    console.log("Clicked on user!");
-    console.log("\n User ID: " + u.id);
-    console.log(this.count++);
-    
-    
-    
+   this.select.emit(u);
   }
 }

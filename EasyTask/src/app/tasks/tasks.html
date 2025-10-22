@@ -1,3 +1,11 @@
 <div>
-    <p>Task For the user {{user()?.name}} </p>
+  @if(user()){
+  <h1>Task For the user {{ user()?.name }}</h1>
+
+  @for(task of tasks(); track task.id){ @if(task.userId === user()?.id){
+  <app-task [task]="task" (compleate)="onCompleate($event)" />
+  } } } @else{
+  <h1>Select User to see task</h1>
+
+  }
 </div>

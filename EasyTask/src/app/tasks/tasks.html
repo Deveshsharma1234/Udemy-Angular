@@ -1,11 +1,31 @@
-<div>
-  @if(user()){
-  <h1>Task For the user {{ user()?.name }}</h1>
+@if(isAddingTask){
+  <app-new-task [isAddingTask]="isAddingTask" (cancel)="onCancelAddTask()" (create)="onCreateTask($event)"/>
+}
 
-  @for(task of tasks(); track task.id){ @if(task.userId === user()?.id){
-  <app-task [task]="task" (compleate)="onCompleate($event)" />
-  } } } @else{
-  <h1>Select User to see task</h1>
+<section>
+  <header>
+    <h2>{{ user()?.name }}</h2>
+    <menu>
+      @if (user() ? true: false){
+        <button (click)="onStartAddTask()">Add Task</button>
+      }
+    </menu>
+  </header>
 
+  @if (user()) {
+    <ul>
+      @for (task of tasks(); track task.id) {
+        @if (task.userId === user()?.id) {
+          <li>
+            <app-task 
+              [task]="task" 
+              (compleate)="onCompleate($event)">
+            </app-task>
+          </li>
+        }
+      }
+    </ul>
+  } @else {
+    <h1>Select a user to see tasks</h1>
   }
-</div>
+</section>

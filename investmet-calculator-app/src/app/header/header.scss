@@ -1,0 +1,22 @@
+header {
+  display: flex;
+  flex-direction: column; // Stack logo and title vertically
+  align-items: center;    // Center horizontally
+  justify-content: center; // Center vertically (if header has height)
+  text-align: center;
+  padding: 2rem 0;
+//   background-color: #1e1e2f; // optional dark background
+  color: #fff; // text color for contrast
+
+  img {
+    width: 80px; // adjust as needed
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #a48bff; // optional purple accent
+  }
+}

@@ -1,0 +1,10 @@
+<div class="input-box">
+  <label [for]="text">{{ text}}</label>
+  <input
+    type="number"
+    [id]="text"
+    [(ngModel)]="value"
+    [attr.placeholder]="placeholder"
+    [attr.title]="placeholder"
+  />
+</div>

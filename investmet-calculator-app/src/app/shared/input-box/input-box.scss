@@ -1,0 +1,40 @@
+.input-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+  padding: 1.5rem;
+  background: #1e1e2f;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+  h2 {
+    color: #a48bff; // purple accent
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  input {
+    width: 200px;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    border: 2px solid #a48bff;
+    background: #2c2c3e;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    transition: 0.3s;
+
+    &:focus {
+      outline: none;
+      border-color: #c7b8ff;
+      box-shadow: 0 0 8px #a48bff;
+    }
+
+    &::placeholder {
+      color: #aaa;
+    }
+  }
+}

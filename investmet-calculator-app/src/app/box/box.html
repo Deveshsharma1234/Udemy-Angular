@@ -1,0 +1,26 @@
+<div class="box">
+  <form>
+    <div class="inputs">
+      <app-input-box
+        [text]="'Initial Investment'"
+        [placeholder]="'Enter amount'"
+      />
+      <app-input-box
+        [text]="'Annual Investment'"
+        [placeholder]="'Enter amount'"
+      />
+      <app-input-box
+        [text]="'Expected Return (%)'"
+        [placeholder]="'Enter percentage'"
+      />
+      <app-input-box
+        [text]="'Duration (Years)'"
+        [placeholder]="'Enter duration'"
+      />
+    </div>
+
+    <div class="btn-container">
+      <app-button [text]="'Calculate'" />
+    </div>
+  </form>
+</div>

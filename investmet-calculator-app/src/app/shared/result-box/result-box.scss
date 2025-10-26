@@ -1,0 +1,33 @@
+.result-box {
+  margin-top: 2rem;
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1a1a1a;
+    color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+    th, td {
+      padding: 12px 16px;
+      text-align: center;
+      border-bottom: 1px solid #333;
+    }
+
+    th {
+      background-color: #4b0082; /* purple header */
+      font-weight: bold;
+    }
+
+    tr:hover {
+      background-color: rgba(75, 0, 130, 0.2);
+    }
+  }
+
+  p {
+    text-align: center;
+    color: #aaa;
+    font-style: italic;
+  }
+}

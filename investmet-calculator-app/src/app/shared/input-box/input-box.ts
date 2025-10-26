@@ -1,4 +1,4 @@
-import { Component,Input, Signal, signal } from '@angular/core';
+import { Component,EventEmitter,Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -11,5 +11,7 @@ import { FormsModule } from '@angular/forms';
 export class InputBox {
 @Input({ required: true }) text: string = 'Amount';
   @Input({ required: true }) placeholder: string = 'Enter value';
-  value: number | null = null;
+   @Input() value: number | null = null;
+  @Output() valueChange = new EventEmitter<number>();
+
 }

@@ -1,21 +1,30 @@
 <div class="box">
-  <form>
+ <form (ngSubmit)="calculate(); $event.preventDefault()">
+
     <div class="inputs">
       <app-input-box
         [text]="'Initial Investment'"
         [placeholder]="'Enter amount'"
+        [value]="initialInvestment()"
+        (valueChange)="initialInvestment.set($event)"
       />
       <app-input-box
         [text]="'Annual Investment'"
         [placeholder]="'Enter amount'"
+        [value]="annualInvestment()"
+        (valueChange)="annualInvestment.set($event)"
       />
       <app-input-box
         [text]="'Expected Return (%)'"
         [placeholder]="'Enter percentage'"
+        [value]="expectedReturn()"
+        (valueChange)="expectedReturn.set($event)"
       />
       <app-input-box
         [text]="'Duration (Years)'"
         [placeholder]="'Enter duration'"
+        [value]="duration()"
+        (valueChange)="duration.set($event)"
       />
     </div>
 

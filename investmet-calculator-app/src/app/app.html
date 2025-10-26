@@ -1,2 +1,3 @@
-<app-header/>
-<app-box/>
+<app-header />
+<app-box (result)="onResult($event)" />
+<app-result-box [data]="data" />

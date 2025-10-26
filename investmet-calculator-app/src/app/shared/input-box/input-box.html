@@ -3,7 +3,8 @@
   <input
     type="number"
     [id]="text"
-    [(ngModel)]="value"
+    [ngModel]="value"
+    (ngModelChange)="valueChange.emit($event)"
     [attr.placeholder]="placeholder"
     [attr.title]="placeholder"
   />
